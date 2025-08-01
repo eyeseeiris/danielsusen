@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('login', (jmeno, heslo) => {
+  cy.get('#btn-open-login-form').click();
+  cy.get('#log').type(Cypress.env('jmeno'));
+  cy.get('#login_password').type(Cypress.env('heslo'));
+  cy.get('#submit').click();
+});
