@@ -1,4 +1,4 @@
-import { menuItems } from '../fixtures/menuitem';
+import { menuItems } from '../fixtures/menu-item';
 describe('menu', () => {
   beforeEach(() => {
     cy.visit('https://danielsusen.cz');
